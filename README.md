@@ -1137,33 +1137,6 @@ Access a given open information resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
 
-## Mailjet.createOpenInformation
-Add a new open information resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| data         | String     | OpenInformation data.
-
-## Mailjet.updateOpenInformation
-Update open information resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| id           | String     | Unique numerical ID for this object.
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| data         | String     | OpenInformation data.
-
-## Mailjet.deleteOpenInformation
-Delete open information resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| id           | String     | Unique numerical ID for this object.
 
 ## Mailjet.getMyProfileList
 List my profile resources available for this apikey.
@@ -1182,14 +1155,6 @@ Access a given my profile resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
 
-## Mailjet.createMyProfile
-Add a new my profile resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| data         | String     | MyProfile data.
 
 ## Mailjet.updateMyProfile
 Update my profile resource.
@@ -1218,14 +1183,6 @@ Access a given user resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
 
-## Mailjet.createUser
-Add a new user resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| data         | String     | User data.
 
 ## Mailjet.updateUser
 Update user resource.
