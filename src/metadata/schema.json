@@ -50,7 +50,6 @@
                 }
             ]
         },
-
         {
             "name": "getSingleMessage",
             "description": "Access a given message resource, providing the message's ID value.",
@@ -89,7 +88,6 @@
                 }
             ]
         },
-
         {
             "name": "getMessageHistoryResource",
             "description": "List message history.",
@@ -128,7 +126,6 @@
                 }
             ]
         },
-
         {
             "name": "getMessageInformation",
             "description": "List message information resources available.",
@@ -199,7 +196,6 @@
                 }
             ]
         },
-
         {
             "name": "getMessageStatistics",
             "description": "Statistical campaign/message data.",
@@ -232,7 +228,6 @@
                 }
             ]
         },
-
         {
             "name": "getMessageStatisticsResource",
             "description": "Access a given message statistics resource.",
@@ -271,7 +266,6 @@
                 }
             ]
         },
-
         {
             "name": "getMessageState",
             "description": "Message state reference.",
@@ -374,7 +368,6 @@
                 }
             ]
         },
-
         {
             "name": "createTemplate",
             "description": "Add a new template resource .",
@@ -412,7 +405,6 @@
                     },
                     "vendorSchema": {
                         "name": "Categories",
-                        "format": "toString:{,}"
                     }
                 },
                 {
@@ -719,8 +711,6 @@
                 }
             ]
         },
-
-
         {
             "name": "getDnsList",
             "description": "List dns resources available for this apikey.",
@@ -791,7 +781,6 @@
                 }
             ]
         },
-
         {
             "name": "checkDomain",
             "description": "Triggers a domain checking.",
@@ -1004,7 +993,6 @@
                 }
             ]
         },
-
         {
             "name": "getSenderList",
             "description": "List sender resources available for this apikey.",
@@ -2760,44 +2748,6 @@
             ],
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/campaignoverview",
-                "method": "get"
-            },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
-            "name": "getSingleCampaignOverview",
-            "description": "Access a given campaign overview  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPrivate",
-                    "type": "credentials",
-                    "info": "Your private mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                }
-            ],
-            "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/campaignoverview/{$data['id']}",
                 "method": "get"
             },
             "callbacks": [

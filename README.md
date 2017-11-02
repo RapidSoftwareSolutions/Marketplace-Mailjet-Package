@@ -618,15 +618,6 @@ List campaign overview  resources available for this apikey.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 
-## Mailjet.getSingleCampaignOverview
-Access a given campaign overview  resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| id           | String     | Unique numerical ID for this object.
-
 ## Mailjet.getCampaignStatisticsList
 List campaign statistics  resources available for this apikey.
 
