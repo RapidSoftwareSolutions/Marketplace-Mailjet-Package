@@ -495,12 +495,7 @@
         {
             "name": "updateTemplate",
             "description": "Update one specific template resource.",
-            "args": [{
-                "name": "id",
-                "type": "String",
-                "info": "Unique numerical ID for this object.",
-                "required": true
-            },
+            "args": [
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -511,6 +506,12 @@
                     "name": "apiKeyPrivate",
                     "type": "credentials",
                     "info": "Your private mailjet API key",
+                    "required": true
+                },
+                {
+                    "name": "id",
+                    "type": "String",
+                    "info": "Unique numerical ID for this object.",
                     "required": true
                 },
                 {
