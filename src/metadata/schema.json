@@ -17,49 +17,45 @@
             "Find your credentials, the API Key and the API Private Key"
         ]
     },
-    "blocks": [
-        {
-            "name": "getMessageList",
-            "description": "Allows you to list and view the details of a Message (an e-mail) processed by Mailjet.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPrivate",
-                    "type": "credentials",
-                    "info": "Your private mailjet API key",
-                    "required": true
-                }
-            ],
-            "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/message",
-                "method": "get"
-            },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
+    "blocks": [{
+        "name": "getMessageList",
+        "description": "Allows you to list and view the details of a Message (an e-mail) processed by Mailjet.",
+        "args": [{
+            "name": "apiKeyPublic",
+            "type": "credentials",
+            "info": "Your public mailjet API key",
+            "required": true
         },
+            {
+                "name": "apiKeyPrivate",
+                "type": "credentials",
+                "info": "Your private mailjet API key",
+                "required": true
+            }
+        ],
+        "vendorRequest": {
+            "url": "https://api.mailjet.com/v3/REST/message",
+            "method": "get"
+        },
+        "callbacks": [{
+            "name": "error",
+            "info": "Error"
+        },
+            {
+                "name": "success",
+                "info": "Success"
+            }
+        ]
+    },
         {
             "name": "getSingleMessage",
             "description": "Access a given message resource, providing the message's ID value.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -77,11 +73,10 @@
                 "url": "https://api.mailjet.com/v3/REST/message/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -91,13 +86,12 @@
         {
             "name": "getMessageHistoryResource",
             "description": "List message history.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -115,11 +109,10 @@
                 "url": "https://api.mailjet.com/v3/REST/messagehistory/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -129,13 +122,12 @@
         {
             "name": "getMessageInformation",
             "description": "List message information resources available.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -147,11 +139,10 @@
                 "url": "https://api.mailjet.com/v3/REST/messageinformation",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -161,13 +152,12 @@
         {
             "name": "getMessageInformationResource",
             "description": "Access a given message information resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -185,11 +175,10 @@
                 "url": "https://api.mailjet.com/v3/REST/messageinformation/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -199,13 +188,12 @@
         {
             "name": "getMessageStatistics",
             "description": "Statistical campaign/message data.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -217,11 +205,10 @@
                 "url": "https://api.mailjet.com/v3/REST/messagesentstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -231,13 +218,12 @@
         {
             "name": "getMessageStatisticsResource",
             "description": "Access a given message statistics resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -255,11 +241,10 @@
                 "url": "https://api.mailjet.com/v3/REST/messagestatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -269,13 +254,12 @@
         {
             "name": "getMessageState",
             "description": "Message state reference.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -287,11 +271,10 @@
                 "url": "https://api.mailjet.com/v3/REST/messagestate",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -301,13 +284,12 @@
         {
             "name": "getTemplatesList",
             "description": "List template resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -319,11 +301,10 @@
                 "url": "https://api.mailjet.com/v3/REST/template",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -333,13 +314,12 @@
         {
             "name": "getSingleTemplate",
             "description": "Return single template object.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -357,11 +337,10 @@
                 "url": "https://api.mailjet.com/v3/REST/template/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -371,13 +350,12 @@
         {
             "name": "createTemplate",
             "description": "Add a new template resource .",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -404,7 +382,7 @@
                         "info": "Single category."
                     },
                     "vendorSchema": {
-                        "name": "Categories",
+                        "name": "Categories"
                     }
                 },
                 {
@@ -489,28 +467,25 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/template",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json",
-                        "parameters": [
-                            "Author",
-                            "Categories",
-                            "Copyright",
-                            "Description",
-                            "EditMode",
-                            "IsStarred",
-                            "Locale",
-                            "Name",
-                            "OwnerType"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json",
+                    "parameters": [
+                        "Author",
+                        "Categories",
+                        "Copyright",
+                        "Description",
+                        "EditMode",
+                        "IsStarred",
+                        "Locale",
+                        "Name",
+                        "OwnerType"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -520,13 +495,12 @@
         {
             "name": "updateTemplate",
             "description": "Update one specific template resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -645,28 +619,25 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/template/{$data['id']}",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json",
-                        "parameters": [
-                            "Author",
-                            "Categories",
-                            "Copyright",
-                            "Description",
-                            "EditMode",
-                            "IsStarred",
-                            "Locale",
-                            "Name",
-                            "OwnerType"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json",
+                    "parameters": [
+                        "Author",
+                        "Categories",
+                        "Copyright",
+                        "Description",
+                        "EditMode",
+                        "IsStarred",
+                        "Locale",
+                        "Name",
+                        "OwnerType"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -676,13 +647,12 @@
         {
             "name": "deleteTemplate",
             "description": "Delete template object.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -700,11 +670,10 @@
                 "url": "https://api.mailjet.com/v3/REST/template/{$data['id']}",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -714,13 +683,12 @@
         {
             "name": "getDnsList",
             "description": "List dns resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -732,11 +700,10 @@
                 "url": "https://api.mailjet.com/v3/REST/dns",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -746,13 +713,12 @@
         {
             "name": "getSingleDns",
             "description": "Return single dns object.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -770,11 +736,10 @@
                 "url": "https://api.mailjet.com/v3/REST/dns/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -784,13 +749,12 @@
         {
             "name": "checkDomain",
             "description": "Triggers a domain checking.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -814,11 +778,10 @@
                 "url": "https://api.mailjet.com/v3/REST/dns/{$data['id']}/check",
                 "method": "post"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -828,13 +791,12 @@
         {
             "name": "getMetasenderList",
             "description": "List metasender resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -846,11 +808,10 @@
                 "url": "https://api.mailjet.com/v3/REST/metasender",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -860,13 +821,12 @@
         {
             "name": "getSingleMetasender",
             "description": "Access a given metasender resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -884,11 +844,10 @@
                 "url": "https://api.mailjet.com/v3/REST/metasender/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -898,13 +857,12 @@
         {
             "name": "createMetasender",
             "description": "Add a new metasender resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -921,20 +879,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/metasender",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -944,13 +899,12 @@
         {
             "name": "updateMetasender",
             "description": "Update metasender resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -973,20 +927,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/metasender/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -996,13 +947,12 @@
         {
             "name": "getSenderList",
             "description": "List sender resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1014,11 +964,10 @@
                 "url": "https://api.mailjet.com/v3/REST/sender",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1028,13 +977,12 @@
         {
             "name": "getSingleSender",
             "description": "Access a given sender resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1052,11 +1000,10 @@
                 "url": "https://api.mailjet.com/v3/REST/sender/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1066,13 +1013,12 @@
         {
             "name": "createSender",
             "description": "Add a new sender resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1089,20 +1035,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/sender",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1112,13 +1055,12 @@
         {
             "name": "updateSender",
             "description": "Update sender resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -1141,20 +1083,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/sender/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1164,13 +1103,12 @@
         {
             "name": "deleteSender",
             "description": "Delete sender resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1188,11 +1126,10 @@
                 "url": "https://api.mailjet.com/v3/REST/sender/{$data['id']}",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1202,13 +1139,12 @@
         {
             "name": "getContactList",
             "description": "List contact resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1220,11 +1156,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contact",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1234,13 +1169,12 @@
         {
             "name": "getSingleContact",
             "description": "Access a given contact resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1258,11 +1192,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contact/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1272,13 +1205,12 @@
         {
             "name": "createContact",
             "description": "Add a new contact resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1295,20 +1227,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/contact",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1318,13 +1247,12 @@
         {
             "name": "updateContact",
             "description": "Update contact resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -1347,20 +1275,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/contact/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1370,13 +1295,12 @@
         {
             "name": "getContactDataList",
             "description": "List contactdata resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1388,11 +1312,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactdata",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1402,13 +1325,12 @@
         {
             "name": "getSingleContactData",
             "description": "Access a given contactdata resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1426,11 +1348,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactdata/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1440,13 +1361,12 @@
         {
             "name": "createContactData",
             "description": "Add a new contactdata resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1463,20 +1383,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/contactdata",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1486,13 +1403,12 @@
         {
             "name": "updateContactData",
             "description": "Update contactdata resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -1515,20 +1431,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/contactdata/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1538,13 +1451,12 @@
         {
             "name": "deleteContactData",
             "description": "Delete contactdata resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1562,11 +1474,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactdata/{$data['id']}",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1576,13 +1487,12 @@
         {
             "name": "getContactHistoryDataList",
             "description": "List contact history data resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1594,11 +1504,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contacthistorydata",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1608,13 +1517,12 @@
         {
             "name": "getSingleContactHistoryData",
             "description": "Access a given contact history data resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1632,11 +1540,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contacthistorydata/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1646,13 +1553,12 @@
         {
             "name": "deleteContactHistoryData",
             "description": "Delete contact history data resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1670,11 +1576,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contacthistorydata/{$data['id']}",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1684,13 +1589,12 @@
         {
             "name": "getContactMetadataList",
             "description": "List contact metadata resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1702,11 +1606,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactmetadata",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1716,13 +1619,12 @@
         {
             "name": "getSingleContactMetadata",
             "description": "Access a given contact metadata resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1740,11 +1642,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactmetadata/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1754,13 +1655,12 @@
         {
             "name": "createContactMetadata",
             "description": "Add a new contact metadata resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1777,20 +1677,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/contactmetadata",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1800,13 +1697,12 @@
         {
             "name": "updateContactMetadata",
             "description": "Update contact metadata resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -1829,20 +1725,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/contactmetadata/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1852,13 +1745,12 @@
         {
             "name": "deleteContactMetadata",
             "description": "Delete contact metadata resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1876,11 +1768,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactmetadata/{$data['id']}",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1890,13 +1781,12 @@
         {
             "name": "getCampaingList",
             "description": "List campaing resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1908,11 +1798,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaign",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1922,13 +1811,12 @@
         {
             "name": "getSingleCampaing",
             "description": "Access a given campaing resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1946,11 +1834,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaing/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1960,13 +1847,12 @@
         {
             "name": "getCampaignDraftList",
             "description": "List campaign draft resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -1978,11 +1864,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -1992,13 +1877,12 @@
         {
             "name": "getSingleCampaignDraft",
             "description": "Access a given campaign draft resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2016,11 +1900,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2030,13 +1913,12 @@
         {
             "name": "createCampaignDraft",
             "description": "Add a new campaign draft resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2053,20 +1935,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2076,13 +1955,12 @@
         {
             "name": "updateCampaignDraft",
             "description": "Update campaign draft resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -2105,20 +1983,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2128,13 +2003,12 @@
         {
             "name": "getCampaignDraftDetailContent",
             "description": "Return the text and html contents of the campaigndraft.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2152,11 +2026,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}/detailcontent",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2166,13 +2039,12 @@
         {
             "name": "createCampaignDraftDetailContent",
             "description": "Update the text and html contents of the campaigndraft.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2195,20 +2067,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}/detailcontent",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2218,13 +2087,12 @@
         {
             "name": "getCampaignDraftScheduled",
             "description": "Return the date for the scheduled sending of the campaign draft.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2242,11 +2110,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}/schedule",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2256,13 +2123,12 @@
         {
             "name": "createCampaignDraftScheduled",
             "description": "Schedule when the campaigndraft will be sent.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2285,20 +2151,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}/schedule",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2308,13 +2171,12 @@
         {
             "name": "updateCampaignDraftScheduled",
             "description": "Update the date when the campaigndraft will be sent.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2337,20 +2199,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}/schedule",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2360,13 +2219,12 @@
         {
             "name": "deleteCampaignDraftScheduled",
             "description": "Cancel a future sending.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2384,11 +2242,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}/schedule",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2398,13 +2255,12 @@
         {
             "name": "sendCampaignDraft",
             "description": "An action to send a Campaign Draft.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2422,11 +2278,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}/send",
                 "method": "post"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2436,13 +2291,12 @@
         {
             "name": "getCampaignDraftStatus",
             "description": "An action to check the status of the Campaign Draft.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2460,11 +2314,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}/status",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2474,13 +2327,12 @@
         {
             "name": "getCampaignGraphStatisticsList",
             "description": "List campaign graph statistics resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2493,7 +2345,7 @@
                     "info": "When != 0 returns stats in ClickedCount.",
                     "required": true,
                     "vendorSchema": {
-                        "name":"Click"
+                        "name": "Click"
                     }
                 },
                 {
@@ -2502,7 +2354,7 @@
                     "info": "Retrieve statistics only for the specified IDs.",
                     "required": true,
                     "vendorSchema": {
-                        "name":"IDS"
+                        "name": "IDS"
                     }
                 },
                 {
@@ -2511,7 +2363,7 @@
                     "info": "When != 0 returns stats in OpenedCount",
                     "required": false,
                     "vendorSchema": {
-                        "name":"Open"
+                        "name": "Open"
                     }
                 },
                 {
@@ -2520,7 +2372,7 @@
                     "info": "24h or 7d. Period = 15 mins for 24h and 30 mins for 7d",
                     "required": false,
                     "vendorSchema": {
-                        "name":"Range"
+                        "name": "Range"
                     }
                 },
                 {
@@ -2529,7 +2381,7 @@
                     "info": "When != 0 returns stats in SpamCount",
                     "required": false,
                     "vendorSchema": {
-                        "name":"Spam"
+                        "name": "Spam"
                     }
                 },
                 {
@@ -2538,7 +2390,7 @@
                     "info": "When != 0 returns stats in UnsubCount",
                     "required": false,
                     "vendorSchema": {
-                        "name":"Unsub"
+                        "name": "Unsub"
                     }
                 }
 
@@ -2547,11 +2399,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigngraphstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2561,13 +2412,12 @@
         {
             "name": "getSingleCampaignGraphStatistics",
             "description": "Access a given campaign graph statistics resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2585,11 +2435,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaigngraphstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2599,13 +2448,12 @@
         {
             "name": "getCampaignOverviewList",
             "description": "List campaign overview  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2617,11 +2465,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaignoverview",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2631,13 +2478,12 @@
         {
             "name": "getCampaignStatisticsList",
             "description": "List campaign statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2649,11 +2495,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaignstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2663,13 +2508,12 @@
         {
             "name": "getSingleCampaignStatistics",
             "description": "Access a given campaign statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2687,11 +2531,10 @@
                 "url": "https://api.mailjet.com/v3/REST/campaignstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2701,13 +2544,12 @@
         {
             "name": "getContactFilterList",
             "description": "List contact filter  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2719,11 +2561,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactfilter",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2733,13 +2574,12 @@
         {
             "name": "getSingleContactFilter",
             "description": "Access a given contact filter  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2757,11 +2597,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactfilter/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2771,13 +2610,12 @@
         {
             "name": "createContactFilter",
             "description": "Add a new contact filter resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2794,20 +2632,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/contactfilter",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2817,13 +2652,12 @@
         {
             "name": "updateContactFilter",
             "description": "Update contact filter resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -2846,20 +2680,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/contactfilter/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2869,13 +2700,12 @@
         {
             "name": "deleteContactFilter",
             "description": "Delete contact filter resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2893,11 +2723,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactfilter/{$data['id']}",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2907,13 +2736,12 @@
         {
             "name": "getNewsLetterList",
             "description": "List newsletter resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2925,11 +2753,10 @@
                 "url": "https://api.mailjet.com/v3/REST/newsletter",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2939,13 +2766,12 @@
         {
             "name": "getSingleNewsLetter",
             "description": "Access a given newsletter resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -2963,11 +2789,10 @@
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -2977,13 +2802,12 @@
         {
             "name": "createNewsLetter",
             "description": "Add a new newsletter resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3000,20 +2824,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/newsletter",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3023,13 +2844,12 @@
         {
             "name": "updateNewsLetter",
             "description": "Update newsletter resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -3052,20 +2872,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3075,13 +2892,12 @@
         {
             "name": "getNewsLetterDetailContent",
             "description": "Return the text and html contents of the newsletter.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3099,11 +2915,10 @@
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}/detailcontent",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3113,13 +2928,12 @@
         {
             "name": "updateNewsLetterDetailContent",
             "description": "Update the text and html contents of the newsletter.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3142,20 +2956,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}/detailcontent",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3165,13 +2976,12 @@
         {
             "name": "getNewsLetterScheduled",
             "description": "Return the date for the scheduled sending of the newsletter.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3189,11 +2999,10 @@
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}/schedule",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3203,13 +3012,12 @@
         {
             "name": "createNewsLetterScheduled",
             "description": "Schedule when the newsletter will be sent.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3232,20 +3040,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}/schedule",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3255,13 +3060,12 @@
         {
             "name": "updateNewsLetterScheduled",
             "description": "Update the date when the newsletter will be sent.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3284,20 +3088,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}/schedule",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3307,13 +3108,12 @@
         {
             "name": "deleteNewsLetterScheduled",
             "description": "Cancel a future sending.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3331,11 +3131,10 @@
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}/schedule",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3345,13 +3144,12 @@
         {
             "name": "sendNewsLetter",
             "description": "An action to send a Campaign Draft.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3369,11 +3167,10 @@
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}/send",
                 "method": "post"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3383,13 +3180,12 @@
         {
             "name": "getNewsLetterStatus",
             "description": "An action to check the status of the Campaign Draft.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3407,11 +3203,10 @@
                 "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}/status",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3421,13 +3216,12 @@
         {
             "name": "getApiKeyTotalList",
             "description": "List api key total  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3439,11 +3233,10 @@
                 "url": "https://api.mailjet.com/v3/REST/apikeytotals",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3453,13 +3246,12 @@
         {
             "name": "getSingleApiKeyTotal",
             "description": "Access a given api key total  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3477,11 +3269,10 @@
                 "url": "https://api.mailjet.com/v3/REST/apikeytotals/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3491,13 +3282,12 @@
         {
             "name": "getContactStatisticsList",
             "description": "List contact statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3509,11 +3299,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3523,13 +3312,12 @@
         {
             "name": "getSingleContactStatistics",
             "description": "Access a given contact statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3547,11 +3335,10 @@
                 "url": "https://api.mailjet.com/v3/REST/contactstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3561,13 +3348,12 @@
         {
             "name": "getDomainStatisticsList",
             "description": "List domain statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3579,11 +3365,10 @@
                 "url": "https://api.mailjet.com/v3/REST/domainstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3593,13 +3378,12 @@
         {
             "name": "getSingleDomainStatistics",
             "description": "Access a given domain statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3617,11 +3401,10 @@
                 "url": "https://api.mailjet.com/v3/REST/domainstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3631,13 +3414,12 @@
         {
             "name": "getGeostatisticsList",
             "description": "List geostatistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3649,11 +3431,10 @@
                 "url": "https://api.mailjet.com/v3/REST/geostatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3663,13 +3444,12 @@
         {
             "name": "getSingleGeostatistics",
             "description": "Access a given geostatistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3687,11 +3467,10 @@
                 "url": "https://api.mailjet.com/v3/REST/geostatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3701,13 +3480,12 @@
         {
             "name": "getSingleGraphstatistics",
             "description": "Access a given graphstatistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3725,11 +3503,10 @@
                 "url": "https://api.mailjet.com/v3/REST/graphstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3739,13 +3516,12 @@
         {
             "name": "getRecipientStatisticsList",
             "description": "List of recipient statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3757,11 +3533,10 @@
                 "url": "https://api.mailjet.com/v3/REST/listrecipientstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3771,13 +3546,12 @@
         {
             "name": "getSingleRecipientStatistics",
             "description": "Access a given list of recipient statistics resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3795,11 +3569,10 @@
                 "url": "https://api.mailjet.com/v3/REST/listrecipientstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3809,13 +3582,12 @@
         {
             "name": "getStatisticsList",
             "description": "List statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3827,11 +3599,10 @@
                 "url": "https://api.mailjet.com/v3/REST/liststatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3841,13 +3612,12 @@
         {
             "name": "getSingleStatistics",
             "description": "Access a given list statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3865,11 +3635,10 @@
                 "url": "https://api.mailjet.com/v3/REST/liststatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3879,13 +3648,12 @@
         {
             "name": "getOpenStatisticsList",
             "description": "List open statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3897,11 +3665,10 @@
                 "url": "https://api.mailjet.com/v3/REST/openstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3911,13 +3678,12 @@
         {
             "name": "getSingleOpenStatistics",
             "description": "Access a given open statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3935,11 +3701,10 @@
                 "url": "https://api.mailjet.com/v3/REST/openstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3949,13 +3714,12 @@
         {
             "name": "getSenderStatisticsList",
             "description": "List sender statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -3967,11 +3731,10 @@
                 "url": "https://api.mailjet.com/v3/REST/senderstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -3981,13 +3744,12 @@
         {
             "name": "getSingleSenderStatistics",
             "description": "Access a given sender statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4005,11 +3767,10 @@
                 "url": "https://api.mailjet.com/v3/REST/senderstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4019,13 +3780,12 @@
         {
             "name": "getTopLinkClickedList",
             "description": "List top link clicked  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4037,11 +3797,10 @@
                 "url": "https://api.mailjet.com/v3/REST/toplinkclicked",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4051,13 +3810,12 @@
         {
             "name": "getSingleTopLinkClicked",
             "description": "Access a given top link clicked  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4075,11 +3833,10 @@
                 "url": "https://api.mailjet.com/v3/REST/toplinkclicked/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4089,13 +3846,12 @@
         {
             "name": "getUseragentStatisticsList",
             "description": "List useragent statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4107,11 +3863,10 @@
                 "url": "https://api.mailjet.com/v3/REST/useragentstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4121,13 +3876,12 @@
         {
             "name": "getSingleUseragentStatistics",
             "description": "Access a given useragent statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4145,11 +3899,10 @@
                 "url": "https://api.mailjet.com/v3/REST/useragentstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4159,13 +3912,12 @@
         {
             "name": "getParseRouteList",
             "description": "List parse route resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4177,11 +3929,10 @@
                 "url": "https://api.mailjet.com/v3/REST/parseroute",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4191,13 +3942,12 @@
         {
             "name": "getSingleParseRoute",
             "description": "Access a given parse route resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4215,11 +3965,10 @@
                 "url": "https://api.mailjet.com/v3/REST/parseroute/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4229,13 +3978,12 @@
         {
             "name": "createParseRoute",
             "description": "Add a new parse route resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4252,20 +4000,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/parseroute",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4275,13 +4020,12 @@
         {
             "name": "updateParseRoute",
             "description": "Update parse route resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -4304,20 +4048,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/parseroute/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4327,13 +4068,12 @@
         {
             "name": "deleteParseRoute",
             "description": "Delete parse route resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4351,11 +4091,10 @@
                 "url": "https://api.mailjet.com/v3/REST/parseroute/{$data['id']}",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4365,13 +4104,12 @@
         {
             "name": "getBounceStatisticsList",
             "description": "List bounce statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4383,11 +4121,10 @@
                 "url": "https://api.mailjet.com/v3/REST/bouncestatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4397,13 +4134,12 @@
         {
             "name": "getSingleBounceStatistics",
             "description": "Access a given bounce statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4421,11 +4157,10 @@
                 "url": "https://api.mailjet.com/v3/REST/bouncestatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4435,13 +4170,12 @@
         {
             "name": "getClickStatisticsList",
             "description": "List click statistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4453,11 +4187,10 @@
                 "url": "https://api.mailjet.com/v3/REST/clickstatistics",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4467,13 +4200,12 @@
         {
             "name": "getSingleClickStatistics",
             "description": "Access a given click statistics  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4491,11 +4223,10 @@
                 "url": "https://api.mailjet.com/v3/REST/clickstatistics/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4505,13 +4236,12 @@
         {
             "name": "getEventCallbackUrlList",
             "description": "List event callback url resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4523,11 +4253,10 @@
                 "url": "https://api.mailjet.com/v3/REST/eventcallbackurl",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4537,13 +4266,12 @@
         {
             "name": "getSingleEventCallbackUrl",
             "description": "Access a given event callback url resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4561,11 +4289,10 @@
                 "url": "https://api.mailjet.com/v3/REST/eventcallbackurl/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4575,13 +4302,12 @@
         {
             "name": "createEventCallbackUrl",
             "description": "Add a new event callback url resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4598,20 +4324,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/eventcallbackurl",
                 "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4621,13 +4344,12 @@
         {
             "name": "updateEventCallbackUrl",
             "description": "Update event callback url resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -4650,20 +4372,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/eventcallbackurl/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4673,13 +4392,12 @@
         {
             "name": "deleteEventCallbackUrl",
             "description": "Delete event callback url resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4697,11 +4415,10 @@
                 "url": "https://api.mailjet.com/v3/REST/eventcallbackurl/{$data['id']}",
                 "method": "delete"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4711,13 +4428,12 @@
         {
             "name": "getOpenInformationList",
             "description": "List open information resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4729,11 +4445,10 @@
                 "url": "https://api.mailjet.com/v3/REST/openinformation",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4743,13 +4458,12 @@
         {
             "name": "getSingleOpenInformation",
             "description": "Access a given open information resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4767,11 +4481,10 @@
                 "url": "https://api.mailjet.com/v3/REST/openinformation/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4781,13 +4494,12 @@
         {
             "name": "getMyProfileList",
             "description": "List my profile resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4799,11 +4511,10 @@
                 "url": "https://api.mailjet.com/v3/REST/myprofile",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4813,13 +4524,12 @@
         {
             "name": "getSingleMyProfile",
             "description": "Access a given my profile resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4837,11 +4547,10 @@
                 "url": "https://api.mailjet.com/v3/REST/myprofile/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4851,13 +4560,12 @@
         {
             "name": "updateMyProfile",
             "description": "Update my profile resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -4880,20 +4588,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/myprofile/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4903,13 +4608,12 @@
         {
             "name": "getUserList",
             "description": "List user resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4921,11 +4625,10 @@
                 "url": "https://api.mailjet.com/v3/REST/user",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4935,13 +4638,12 @@
         {
             "name": "getSingleUser",
             "description": "Access a given user resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -4959,11 +4661,10 @@
                 "url": "https://api.mailjet.com/v3/REST/user/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -4973,13 +4674,12 @@
         {
             "name": "updateUser",
             "description": "Update user resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
+            "args": [{
+                "name": "id",
+                "type": "String",
+                "info": "Unique numerical ID for this object.",
+                "required": true
+            },
                 {
                     "name": "apiKeyPublic",
                     "type": "credentials",
@@ -5002,20 +4702,17 @@
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/user/{$data['id']}",
                 "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
+                "requestParameters": [{
+                    "type": "json:body",
+                    "parameters": [
+                        "data"
+                    ]
+                }]
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -5025,13 +4722,12 @@
         {
             "name": "getMetadataList",
             "description": "List metadata  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -5043,11 +4739,10 @@
                 "url": "https://api.mailjet.com/v3/REST/metadata",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
@@ -5057,13 +4752,12 @@
         {
             "name": "getSingleMetadata",
             "description": "Access a given metadata  resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
+            "args": [{
+                "name": "apiKeyPublic",
+                "type": "credentials",
+                "info": "Your public mailjet API key",
+                "required": true
+            },
                 {
                     "name": "apiKeyPrivate",
                     "type": "credentials",
@@ -5081,11 +4775,10 @@
                 "url": "https://api.mailjet.com/v3/REST/metadata/{$data['id']}",
                 "method": "get"
             },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
+            "callbacks": [{
+                "name": "error",
+                "info": "Error"
+            },
                 {
                     "name": "success",
                     "info": "Success"
