@@ -553,15 +553,6 @@ Update campaign draft resource.
 }
 ```
 
-## Mailjet.deleteCampaignDraft
-Delete campaign draft resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| id           | String     | Unique numerical ID for this object.
-
 ## Mailjet.getCampaignDraftDetailContent
 Return the text and html contents of the campaigndraft.
 
@@ -794,14 +785,6 @@ Update newsletter resource.
 }
 ```
 
-## Mailjet.deleteNewsLetter
-Delete newsletter resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| id           | String     | Unique numerical ID for this object.
 
 ## Mailjet.getNewsLetterDetailContent
 Return the text and html contents of the newsletter.

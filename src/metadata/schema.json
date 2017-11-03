@@ -2126,44 +2126,6 @@
             ]
         },
         {
-            "name": "deleteCampaignDraft",
-            "description": "Delete campaign draft resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPrivate",
-                    "type": "credentials",
-                    "info": "Your private mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                }
-            ],
-            "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/campaigndraft/{$data['id']}",
-                "method": "delete"
-            },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
             "name": "getCampaignDraftDetailContent",
             "description": "Return the text and html contents of the campaigndraft.",
             "args": [
@@ -3098,44 +3060,6 @@
                         ]
                     }
                 ]
-            },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
-            "name": "deleteNewsLetter",
-            "description": "Delete newsletter resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPrivate",
-                    "type": "credentials",
-                    "info": "Your private mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                }
-            ],
-            "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/newsletter/{$data['id']}",
-                "method": "delete"
             },
             "callbacks": [
                 {
