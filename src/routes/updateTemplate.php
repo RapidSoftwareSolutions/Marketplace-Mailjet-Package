@@ -20,9 +20,6 @@ $app->post('/api/Mailjet/updateTemplate', function ($request, $response) {
 
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);
 
-    
-    $data['Categories'] = \Models\Params::toString($data['Categories'], ','); 
-
     $client = $this->httpClient;
     $query_str = "https://api.mailjet.com/v3/REST/template/{$data['id']}";
 
