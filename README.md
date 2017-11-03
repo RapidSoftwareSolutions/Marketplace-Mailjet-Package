@@ -488,16 +488,6 @@ Access a given campaing resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
 
-
-## Mailjet.deleteCampaing
-Delete campaing resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| id           | String     | Unique numerical ID for this object.
-
 ## Mailjet.getCampaignDraftList
 List campaign draft resources available for this apikey.
 
@@ -635,6 +625,12 @@ List campaign graph statistics resources available for this apikey.
 |--------------|------------|----------
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
+| click| String| When != 0 returns stats in ClickedCount.
+| ids| String| Retrieve statistics only for the specified IDs.
+| open| String| When != 0 returns stats in OpenedCount
+| range| String| 24h or 7d. Period = 15 mins for 24h and 30 mins for 7d
+| spam| String| When != 0 returns stats in SpamCount
+| unsub| String| When != 0 returns stats in UnsubCount
 
 ## Mailjet.getSingleCampaignGraphStatistics
 Access a given campaign graph statistics resource.
