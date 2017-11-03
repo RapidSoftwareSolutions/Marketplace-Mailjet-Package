@@ -1,6 +1,6 @@
 <?php
 
-$app->post('/api/Mailjet/updateCampaignDraftDetailContent', function ($request, $response) {
+$app->post('/api/Mailjet/createCampaignDraftDetailContent', function ($request, $response) {
 
     $settings = $this->settings;
     $checkRequest = $this->validation;

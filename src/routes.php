@@ -60,7 +60,7 @@ $routes = [
     'updateCampaignDraft',
     'deleteCampaignDraft',
     'getCampaignDraftDetailContent',
-    'updateCampaignDraftDetailContent',
+    'createCampaignDraftDetailContent',
     'getCampaignDraftScheduled',
     'createCampaignDraftScheduled',
     'updateCampaignDraftScheduled',

@@ -4,7 +4,7 @@ $app->post('/api/Mailjet/getCampaignGraphStatisticsList', function ($request, $r
 
     $settings = $this->settings;
     $checkRequest = $this->validation;
-    $validateRes = $checkRequest->validate($request, ['apiKeyPublic','apiKeyPrivate']);
+    $validateRes = $checkRequest->validate($request, ['apiKeyPublic','apiKeyPrivate','click','ids']);
 
     if(!empty($validateRes) && isset($validateRes['callback']) && $validateRes['callback']=='error') {
         return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($validateRes);
@@ -12,9 +12,10 @@ $app->post('/api/Mailjet/getCampaignGraphStatisticsList', function ($request, $r
         $post_data = $validateRes;
     }
 
-    $requiredParams = ['apiKeyPublic'=>'apiKeyPublic','apiKeyPrivate'=>'apiKeyPrivate'];
-    $optionalParams = [];
+    $requiredParams = ['apiKeyPublic'=>'apiKeyPublic','apiKeyPrivate'=>'apiKeyPrivate', 'click'=>'Click', 'ids'=>'IDS'];
+    $optionalParams = ['open'=>'Open', 'range'=>'Range', 'spam'=>'Spam', 'unsub' => 'Unsub'];
     $bodyParams = [
+        'query' => ['Click','Open','IDS','Range','Spam','Unsub']
     ];
 
     $data = \Models\Params::createParams($requiredParams, $optionalParams, $post_data['args']);

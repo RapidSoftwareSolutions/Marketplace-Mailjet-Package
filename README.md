@@ -192,6 +192,12 @@ Add a new metasender resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | Metasender data.
 
+```
+"data": {
+  "Email":"test@yoursite.com"
+}
+```
+
 ## Mailjet.updateMetasender
 Update metasender resource.
 
@@ -202,6 +208,11 @@ Update metasender resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | Metasender data.
 
+```
+"data": {
+  "Email":"test@yoursite.com"
+}
+```
 ## Mailjet.getSenderList
 List sender resources available for this apikey.
 
@@ -228,6 +239,12 @@ Add a new sender resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | Sender data.
 
+```
+"data": {
+  "Email":"test@yoursite.com"
+}
+```
+
 ## Mailjet.updateSender
 Update sender resource.
 
@@ -238,6 +255,12 @@ Update sender resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | Sender data.
 
+```
+"data": {
+  "Email":"test@yoursite.com"
+}
+```
+
 ## Mailjet.deleteSender
 Delete sender resource.
 
@@ -247,15 +270,6 @@ Delete sender resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
 
-## Mailjet.validateSender
-Used to validate a sender email(sample@domain.com) by checking caller's rights, existence of active sender domain (*@domain.com) or existence of metasender for that email or it's domain. Used to validate sender domain (*@domain.com) by checking caller's rights, existence of metasender for that domain or by searching ownership token on the domain root or in the DNS.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| id           | String     | Unique numerical ID for this object.
-| data         | JSOJ       | Validation data
 
 ## Mailjet.getContactList
 List contact resources available for this apikey.
@@ -283,6 +297,12 @@ Add a new contact resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | Contact data.
 
+```
+"data": {
+  "Email":"test@yoursite.com"
+}
+```
+
 ## Mailjet.updateContact
 Update contact resource.
 
@@ -292,6 +312,12 @@ Update contact resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | Contact data.
+
+```
+"data": {
+  "Email":"test@yoursite.com"
+}
+```
 
 ## Mailjet.getContactDataList
 List contactdata resources available for this apikey.
@@ -319,6 +345,16 @@ Add a new contactdata resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | ContactData data.
 
+``` 
+data: {
+  "ID":"$ID",
+  "Data": {
+    "Key" : "Value"
+  }
+}
+
+```
+
 ## Mailjet.updateContactData
 Update contactdata resource.
 
@@ -328,6 +364,16 @@ Update contactdata resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | ContactData data.
+
+``` 
+data: {
+  "ID":"$ID",
+  "Data": {
+    "Key" : "Value"
+  }
+}
+
+```
 
 ## Mailjet.deleteContactData
 Delete contactdata resource.
@@ -354,25 +400,6 @@ Access a given contact history data resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
-
-## Mailjet.createContactHistoryData
-Add a new contact history data resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| data         | String     | ContactHistoryData data.
-
-## Mailjet.updateContactHistoryData
-Update contact history data resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| id           | String     | Unique numerical ID for this object.
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| data         | String     | ContactHistoryData data.
 
 ## Mailjet.deleteContactHistoryData
 Delete contact history data resource.
@@ -409,6 +436,14 @@ Add a new contact metadata resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | ContactMetadata data.
 
+``` 
+"data": {
+    "Datatype": "str",
+    "Name": "asd",
+    "NameSpace": "static"
+}
+```
+
 ## Mailjet.updateContactMetadata
 Update contact metadata resource.
 
@@ -418,6 +453,14 @@ Update contact metadata resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | ContactMetadata data.
+
+``` 
+"data": {
+    "Datatype": "str",
+    "Name": "asd",
+    "NameSpace": "static"
+}
+```
 
 ## Mailjet.deleteContactMetadata
 Delete contact metadata resource.
@@ -445,24 +488,6 @@ Access a given campaing resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
 
-## Mailjet.createCampaing
-Add a new campaing resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| data         | String     | Campaing data.
-
-## Mailjet.updateCampaing
-Update campaing resource.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| id           | String     | Unique numerical ID for this object.
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
-| data         | String     | Campaing data.
 
 ## Mailjet.deleteCampaing
 Delete campaing resource.
@@ -499,6 +524,15 @@ Add a new campaign draft resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | CampaignDraft data.
 
+``` 
+"data": {
+    "Locale":"en",
+	"Sender":"Name",
+	"SenderEmail":"email@gmail.com",
+	"Subject":"test"
+}
+```
+
 ## Mailjet.updateCampaignDraft
 Update campaign draft resource.
 
@@ -508,6 +542,16 @@ Update campaign draft resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | CampaignDraft data.
+
+
+``` 
+"data": {
+    "Locale":"en",
+	"Sender":"Name",
+	"SenderEmail":"email@gmail.com",
+	"Subject":"test"
+}
+```
 
 ## Mailjet.deleteCampaignDraft
 Delete campaign draft resource.
@@ -527,7 +571,7 @@ Return the text and html contents of the campaigndraft.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
 
-## Mailjet.updateCampaignDraftDetailContent
+## Mailjet.createCampaignDraftDetailContent
 Update the text and html contents of the campaigndraft.
 
 | Field        | Type       | Description
@@ -661,6 +705,13 @@ Add a new contact filter resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | ContactFilter data.
 
+``` 
+"data":{
+    "Name":"example@gmail.com",
+    "Expression":"test"
+}
+```
+
 ## Mailjet.updateContactFilter
 Update contact filter resource.
 
@@ -670,6 +721,13 @@ Update contact filter resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | ContactFilter data.
+
+``` 
+"data":{
+    "Name":"example@gmail.com",
+    "Expression":"test"
+}
+```
 
 ## Mailjet.deleteContactFilter
 Delete contact filter resource.
@@ -706,6 +764,16 @@ Add a new newsletter resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | NewsLetter data.
 
+``` 
+"data": {
+    "Locale":"en",
+    "Sender":"18656",
+    "SenderEmail":"emaple@gmail.com",
+    "Subject":"testMessage",
+    "ContactsListID": 17094462
+}
+```
+
 ## Mailjet.updateNewsLetter
 Update newsletter resource.
 
@@ -715,6 +783,16 @@ Update newsletter resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | NewsLetter data.
+
+``` 
+"data": {
+    "Locale":"en",
+    "Sender":"18656",
+    "SenderEmail":"emaple@gmail.com",
+    "Subject":"testMessage",
+    "ContactsListID": 17094462
+}
+```
 
 ## Mailjet.deleteNewsLetter
 Delete newsletter resource.
@@ -868,13 +946,6 @@ Access a given geostatistics  resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | id           | String     | Unique numerical ID for this object.
 
-## Mailjet.getGraphstatisticsList
-List graphstatistics  resources available for this apikey.
-
-| Field        | Type       | Description
-|--------------|------------|----------
-| apiKeyPublic | credentials| Your public mailjet API key
-| apiKeyPrivate| credentials| Your private mailjet API key
 
 ## Mailjet.getSingleGraphstatistics
 Access a given graphstatistics  resource.
@@ -1013,6 +1084,14 @@ Add a new parse route resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | ParseRoute data.
 
+``` 
+"data": {
+    "APIKeyALT":"ApiKey",
+    "Email":"example@gmail.com",
+    "Url":"https://rapidapi.com/hello/world"
+}
+```
+
 ## Mailjet.updateParseRoute
 Update parse route resource.
 
@@ -1022,6 +1101,14 @@ Update parse route resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | ParseRoute data.
+
+``` 
+"data": {
+    "APIKeyALT":"ApiKey",
+    "Email":"example@gmail.com",
+    "Url":"https://rapidapi.com/hello/world"
+}
+```
 
 ## Mailjet.deleteParseRoute
 Delete parse route resource.
@@ -1092,6 +1179,13 @@ Add a new event callback url resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | EventCallbackUrl data.
 
+``` 
+"data": {
+    "APIKeyALT":"ApiKey",
+    "Url":"https://site/test/event"
+}
+```
+
 ## Mailjet.updateEventCallbackUrl
 Update event callback url resource.
 
@@ -1101,6 +1195,14 @@ Update event callback url resource.
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | EventCallbackUrl data.
+
+
+``` 
+"data": {
+    "APIKeyALT":"ApiKey",
+    "Url":"https://site/test/event"
+}
+```
 
 ## Mailjet.deleteEventCallbackUrl
 Delete event callback url resource.
@@ -1157,6 +1259,12 @@ Update my profile resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | MyProfile data.
 
+``` 
+"data": {
+    "JobTitle":"Team lead"
+}
+```
+
 ## Mailjet.getUserList
 List user resources available for this apikey.
 
@@ -1185,6 +1293,12 @@ Update user resource.
 | apiKeyPrivate| credentials| Your private mailjet API key
 | data         | String     | User data.
 
+``` 
+"data": {
+    "Timezone":"4"
+}
+```
+
 ## Mailjet.getMetadataList
 List metadata  resources available for this apikey.
 
@@ -1200,5 +1314,5 @@ Access a given metadata  resource.
 |--------------|------------|----------
 | apiKeyPublic | credentials| Your public mailjet API key
 | apiKeyPrivate| credentials| Your private mailjet API key
-| id           | String     | Unique numerical ID for this object.
+| id           | String     | Unique numerical ID or name for this object.
 

@@ -23,7 +23,7 @@ $app->post('/api/Mailjet/createCampaing', function ($request, $response) {
     
 
     $client = $this->httpClient;
-    $query_str = "https://api.mailjet.com/v3/REST/campaing";
+    $query_str = "https://api.mailjet.com/v3/REST/campaign";
 
     
 

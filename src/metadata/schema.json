@@ -1200,58 +1200,6 @@
             ]
         },
         {
-            "name": "validateSender",
-            "description": "Used to validate a sender email(sample@domain.com) by checking caller's rights, existence of active sender domain (*@domain.com) or existence of metasender for that email or it's domain. Used to validate sender domain (*@domain.com) by checking caller's rights, existence of metasender for that domain or by searching ownership token on the domain root or in the DNS.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPrivate",
-                    "type": "credentials",
-                    "info": "Your private mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
-                {
-                    "name": "data",
-                    "type": "JSON",
-                    "info": "Validation data",
-                    "required": true
-                }
-            ],
-            "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/sender/{$data['id']}/validate",
-                "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
-            },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
             "name": "getContactList",
             "description": "List contact resources available for this apikey.",
             "args": [
@@ -1696,104 +1644,6 @@
             ]
         },
         {
-            "name": "createContactHistoryData",
-            "description": "Add a new contact history data resource.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPrivate",
-                    "type": "credentials",
-                    "info": "Your private mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "data",
-                    "type": "String",
-                    "info": "ContactHistoryData data.",
-                    "required": true
-                }
-            ],
-            "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/contacthistorydata",
-                "method": "post",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
-            },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
-            "name": "updateContactHistoryData",
-            "description": "Update contact history data resource.",
-            "args": [
-                {
-                    "name": "id",
-                    "type": "String",
-                    "info": "Unique numerical ID for this object.",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPrivate",
-                    "type": "credentials",
-                    "info": "Your private mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "data",
-                    "type": "String",
-                    "info": "ContactHistoryData data.",
-                    "required": true
-                }
-            ],
-            "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/contacthistorydata/{$data['id']}",
-                "method": "put",
-                "requestParameters": [
-                    {
-                        "type": "json:body",
-                        "parameters": [
-                            "data"
-                        ]
-                    }
-                ]
-            },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
             "name": "deleteContactHistoryData",
             "description": "Delete contact history data resource.",
             "args": [
@@ -2055,7 +1905,7 @@
                 }
             ],
             "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/campaing",
+                "url": "https://api.mailjet.com/v3/REST/campaign",
                 "method": "get"
             },
             "callbacks": [
@@ -2352,7 +2202,7 @@
             ]
         },
         {
-            "name": "updateCampaignDraftDetailContent",
+            "name": "createCampaignDraftDetailContent",
             "description": "Update the text and html contents of the campaigndraft.",
             "args": [
                 {
@@ -2674,7 +2524,62 @@
                     "type": "credentials",
                     "info": "Your private mailjet API key",
                     "required": true
+                },
+                {
+                    "name": "click",
+                    "type": "String",
+                    "info": "When != 0 returns stats in ClickedCount.",
+                    "required": true,
+                    "vendorSchema": {
+                        "name":"Click"
+                    }
+                },
+                {
+                    "name": "ids",
+                    "type": "String",
+                    "info": "Retrieve statistics only for the specified IDs.",
+                    "required": true,
+                    "vendorSchema": {
+                        "name":"IDS"
+                    }
+                },
+                {
+                    "name": "open",
+                    "type": "String",
+                    "info": "When != 0 returns stats in OpenedCount",
+                    "required": false,
+                    "vendorSchema": {
+                        "name":"Open"
+                    }
+                },
+                {
+                    "name": "range",
+                    "type": "String",
+                    "info": "24h or 7d. Period = 15 mins for 24h and 30 mins for 7d",
+                    "required": false,
+                    "vendorSchema": {
+                        "name":"Range"
+                    }
+                },
+                {
+                    "name": "spam",
+                    "type": "String",
+                    "info": "When != 0 returns stats in SpamCount",
+                    "required": false,
+                    "vendorSchema": {
+                        "name":"Spam"
+                    }
+                },
+                {
+                    "name": "unsub",
+                    "type": "String",
+                    "info": "When != 0 returns stats in UnsubCount",
+                    "required": false,
+                    "vendorSchema": {
+                        "name":"Unsub"
+                    }
                 }
+
             ],
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/campaigngraphstatistics",
@@ -3856,38 +3761,6 @@
             ],
             "vendorRequest": {
                 "url": "https://api.mailjet.com/v3/REST/geostatistics/{$data['id']}",
-                "method": "get"
-            },
-            "callbacks": [
-                {
-                    "name": "error",
-                    "info": "Error"
-                },
-                {
-                    "name": "success",
-                    "info": "Success"
-                }
-            ]
-        },
-        {
-            "name": "getGraphstatisticsList",
-            "description": "List graphstatistics  resources available for this apikey.",
-            "args": [
-                {
-                    "name": "apiKeyPublic",
-                    "type": "credentials",
-                    "info": "Your public mailjet API key",
-                    "required": true
-                },
-                {
-                    "name": "apiKeyPrivate",
-                    "type": "credentials",
-                    "info": "Your private mailjet API key",
-                    "required": true
-                }
-            ],
-            "vendorRequest": {
-                "url": "https://api.mailjet.com/v3/REST/graphstatistics",
                 "method": "get"
             },
             "callbacks": [
@@ -5276,7 +5149,7 @@
                 {
                     "name": "id",
                     "type": "String",
-                    "info": "Unique numerical ID for this object.",
+                    "info": "Unique numerical ID or name for this object.",
                     "required": true
                 }
             ],
