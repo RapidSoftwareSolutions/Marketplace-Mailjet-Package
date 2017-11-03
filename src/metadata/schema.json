@@ -10,13 +10,13 @@
         "credentials": [
             "apiKeyPublic",
             "apiKeyPrivate"
-        ],
-        "steps": [
-            "Sing in - https://mailjet.com",
-            "Navigate to account/API Keys section - https://eu.mailjet.com/account/api_keys",
-            "Find your credentials, the API Key and the API Private Key"
         ]
     },
+    "steps": [
+        "Sing in - https://mailjet.com",
+        "Navigate to account/API Keys section - https://eu.mailjet.com/account/api_keys",
+        "Find your credentials, the API Key and the API Private Key"
+    ],
     "blocks": [{
         "name": "getMessageList",
         "description": "Allows you to list and view the details of a Message (an e-mail) processed by Mailjet.",
