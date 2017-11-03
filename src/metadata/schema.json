@@ -534,7 +534,6 @@
                     },
                     "vendorSchema": {
                         "name": "Categories",
-                        "format": "toString:{,}"
                     }
                 },
                 {
